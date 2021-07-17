@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-17T02:41:15.315Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="kfqtx_4aLGPAszAYfZ85" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-17T03:25:47.344Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="MEEwPeLGo9RydX5L6i0Z" version="14.8.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="3231" dy="1327" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -163,13 +163,8 @@
         <mxCell id="r7vuIs5AqBOSYw8_jUMy-65" value="获取result" style="rhombus;whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="280.5" y="1406" width="105" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="r7vuIs5AqBOSYw8_jUMy-89" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r7vuIs5AqBOSYw8_jUMy-67" target="r7vuIs5AqBOSYw8_jUMy-88">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="845" y="1769" />
-              <mxPoint x="845" y="1769" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-216" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r7vuIs5AqBOSYw8_jUMy-67" target="r7vuIs5AqBOSYw8_jUMy-215">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="r7vuIs5AqBOSYw8_jUMy-67" value="更新record（set status=2,cause=&quot;&quot;）" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="331" y="1738.5" width="120" height="60" as="geometry" />
@@ -473,6 +468,30 @@
         </mxCell>
         <mxCell id="r7vuIs5AqBOSYw8_jUMy-210" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;1.从hr用户获取比森token，bensenTenantId&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2.从redis获取职位id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;3.封装考生测试信息&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;4.userId=0&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-238.5" y="1031" width="176.5" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-218" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r7vuIs5AqBOSYw8_jUMy-215" target="r7vuIs5AqBOSYw8_jUMy-217">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-221" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r7vuIs5AqBOSYw8_jUMy-215" target="r7vuIs5AqBOSYw8_jUMy-88">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="567" y="1848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-215" value="type=2&lt;br&gt;即在线面试面完一轮" style="rhombus;whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="503" y="1728.5" width="128" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r7vuIs5AqBOSYw8_jUMy-217">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="918.4117647058829" y="1768.4999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-217" value="插入一条该类型的待回调记录" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="671" y="1738.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r7vuIs5AqBOSYw8_jUMy-219" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="628" y="1743" width="34" height="18" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
