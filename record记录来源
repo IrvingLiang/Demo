@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-17T15:08:23.491Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="UryottFAT9GTUbAwj5Rt" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-19T04:25:15.468Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="lK6vQPv2vXX0xOpXx4RS" version="14.8.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1346" dy="588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2866" dy="1160" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -55,12 +55,6 @@
             <mxPoint x="756" y="406" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-28" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="804" y="955" as="sourcePoint" />
-            <mxPoint x="854" y="905" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="0lGR8tY5QTlnWh_6op-8-29" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="426" y="494" as="sourcePoint" />
@@ -86,6 +80,18 @@
         </mxCell>
         <mxCell id="0lGR8tY5QTlnWh_6op-8-37" value="&lt;div&gt;&amp;nbsp; PDF_GENERATED(5, CTS_TEST,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;考生成绩报告生成&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="789.75" y="691" width="209" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-39" value="CHEAT_DETECT_DONE(6, CTS_TEST, &quot;考生作弊检测完毕&quot;)" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="789.75" y="839" width="224" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-40" value="papers/{paperId:[0-9]+}/test_users /给试卷添加考生，如果考试不允许考生自己报名参加，就只能在这添加考生 ，接口传递的考生中有callback那么就需要插入考试完成，判题完成记录作弊检测完成，&lt;font color=&quot;#ff0000&quot;&gt;北森会把没考试的直接不回调，那其他的呢&lt;/font&gt;&lt;br&gt;self-interview/add&amp;nbsp; 自主面试添加考生（这里的callback为空，及非猎聘考生不回调）" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#000000;strokeWidth=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-46" y="791" width="709" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-41" value="如果是liepin，并且callback为空那就直接给callback填充来自hrconfig的猎聘url" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-510" y="749" width="309" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-42" value="CheatStatusUpdateHandler.dohandler会处理作弊检测完成的事件，插入作弊检测完成的回调" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-46" y="882" width="636" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
