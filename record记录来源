@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T07:14:57.390Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="GhJflKTNy66FtATeGjHH" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-23T04:18:25.492Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" etag="3c5ap-E9n1aZfkp3NCNd" version="14.9.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2466" dy="1160" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,112 +7,121 @@
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="&lt;div&gt;&amp;nbsp; TEST_JUDGE_DONE(1, CTS_TEST,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;考生测评进行了人工判题&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="806" y="198" width="240" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-3" value="&lt;div&gt;&amp;nbsp; TEST_DONE(3, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;考生完成测评&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-3" value="&lt;div&gt;&amp;nbsp; TEST_DONE(3, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;考生完成测评&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="818" y="390" width="245.5" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-4" value="回调记录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-4" value="回调记录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="865" y="93" width="58" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-11" value="judging-tests/{testId}&amp;nbsp; &amp;nbsp; &amp;nbsp;(进行了人工判题)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-11" value="judging-tests/{testId}&amp;nbsp; &amp;nbsp; &amp;nbsp;(进行了人工判题)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-36" y="152" width="228" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-13" value="judging-tests/{testId}/judge-without-login&amp;nbsp; &amp;nbsp; (第三方免登录判题)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;dashed=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-13" value="judging-tests/{testId}/judge-without-login&amp;nbsp; &amp;nbsp; (第三方免登录判题)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeWidth=1;dashed=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-36" y="231" width="364" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-14" value="/papers/{paperId:[0-9]+}/add_from_other_paper&amp;nbsp; 将一张试卷未到场的考生导入某场笔试" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-14" value="/papers/{paperId:[0-9]+}/add_from_other_paper&amp;nbsp; 将一张试卷未到场的考生导入某场笔试(&lt;span style=&quot;text-align: left&quot;&gt;callbackTime为空&lt;/span&gt;)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;fillColor=#e1d5e7;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-38" y="307" width="466" height="51" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-15" value="/beisen/{ownerId:[0-9]+}/add_test_users&amp;nbsp; --- 北森批量添加考生&lt;br&gt;如果paperSetting的signUpFields没有callback值，并且exce中有该用户的callback就插入了判题完成和考生完成测评的record" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-15" value="/beisen/{ownerId:[0-9]+}/add_test_users&amp;nbsp; --- 北森批量添加考生&lt;br&gt;如果paperSetting的signUpFields没有callback值，并且exce中有该用户的callback就插入了判题完成和考生完成测评的record（callbackTime为空）" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-38" y="397" width="517" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-16" value="/papers/cts_user_task&amp;nbsp; &amp;nbsp;第三方添加或更新考生,为啥要添加考生完成测评的record，如果paperSetting的signUpFields没有值，并且exce中有该用户的callback就插入了判题完成和考生完成测评的record(大概率不会走这个逻辑)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-16" value="/papers/cts_user_task&amp;nbsp; &amp;nbsp;第三方添加或更新考生，&lt;br&gt;如果paperSetting的signUpFields没有值，并且exce中有就把该用户的callback插入了判题完成和考生完成测评的record(callbackTime为空)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-38" y="468" width="463" height="42" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-22" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-11" target="WIyWlLk6GJQsqaUBKTNV-3">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-22" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-11" target="WIyWlLk6GJQsqaUBKTNV-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="198" y="136" as="sourcePoint" />
             <mxPoint x="798" y="178" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-23" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-13">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-23" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="410" y="500" as="sourcePoint" />
             <mxPoint x="810" y="247" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-24" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-14" target="0lGR8tY5QTlnWh_6op-8-3">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-24" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-14" target="0lGR8tY5QTlnWh_6op-8-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="413" y="430" as="sourcePoint" />
             <mxPoint x="463" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-27" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-27" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="481" y="418" as="sourcePoint" />
             <mxPoint x="815" y="418" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-29" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-29" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="426" y="492" as="sourcePoint" />
             <mxPoint x="820" y="423" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-32" value="&lt;div&gt;&amp;nbsp; PAPER_FINISHED(4, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;试卷整体结束&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="806" y="555.5" width="216" height="60" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-32" value="&lt;div&gt;&amp;nbsp; PAPER_FINISHED(4, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;试卷整体结束&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="802" y="651.5" width="216" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-33" target="0lGR8tY5QTlnWh_6op-8-32">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-33" target="0lGR8tY5QTlnWh_6op-8-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-33" value="CheckCtsPaperFinishedJob定时扫描试卷发现试卷结束就发送试卷结束的mq消息，由PaperFinishedEventHandler处理：&lt;br&gt;&amp;nbsp; &amp;nbsp; 查询hr用户的callback参数，&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;如果不为空，便查询该试卷的所有考生，为每个用户添加试卷结束的回调record&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;为空，则查询所有未参加考试的考生，对有测试结束回调记录的考生添加试卷结束的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d6b656;strokeWidth=1;align=left;fillColor=#fff2cc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-41" y="546" width="547" height="79" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-33" value="CheckCtsPaperFinishedJob定时扫描试卷发现试卷结束就发送试卷结束的mq消息，由PaperFinishedEventHandler处理：&lt;br&gt;&amp;nbsp; &amp;nbsp; 查询hr用户的callback参数，&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;如果不为空，便查询该试卷的所有考生，为每个用户添加试卷结束的回调record&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;为空，则查询所有未参加考试的考生，对有考试结束回调记录的考生，读取这条回到的callbackUrl添加试卷结束的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d6b656;strokeWidth=1;align=left;fillColor=#fff2cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-45" y="642" width="547" height="79" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-35">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-35" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="805" y="679" as="targetPoint" />
+            <mxPoint x="801" y="775" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-35" value="pdf工程生成了成绩报告，就会为对应的考生插入pdf生成的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d6b656;strokeWidth=1;align=left;fillColor=#fff2cc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-46" y="657" width="579" height="43" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-35" value="pdf工程生成了成绩报告，就会为对应的考生插入pdf生成的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d6b656;strokeWidth=1;align=left;fillColor=#fff2cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-50" y="753" width="579" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-37" value="&lt;div&gt;&amp;nbsp; PDF_GENERATED(5, CTS_TEST,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;考生成绩报告生成&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="808" y="654" width="204" height="60" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-37" value="&lt;div&gt;&amp;nbsp; PDF_GENERATED(5, CTS_TEST,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;考生成绩报告生成&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="804" y="750" width="204" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-39" value="CHEAT_DETECT_DONE(6, CTS_TEST, &quot;考生作弊检测完毕&quot;)" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="806" y="840" width="224" height="50" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-39" value="CHEAT_DETECT_DONE(6, CTS_TEST, &quot;考生作弊检测完毕&quot;)" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="802" y="936" width="224" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-40" value="papers/{paperId:[0-9]+}/test_users /给试卷添加考生，如果考试不允许考生自己报名参加，就只能在这添加考生 ，接口传递的考生中有callback那么就需要提前插入考试完成，判题完成记录作弊检测完成的回调记录（callbackTime为空）&lt;br&gt;self-interview/add&amp;nbsp; 自主面试添加考生（这里的callback为空，即非猎聘考生不回调）" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d79b00;strokeWidth=1;align=left;fillColor=#ffe6cc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-46" y="744" width="709" height="49" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-40" value="papers/{paperId:[0-9]+}/test_users /给试卷添加考生，如果考试不允许考生自己报名参加，就只能在这添加考生 ，接口传递的考生中有callback那么就需要提前插入考试完成，判题完成记录作弊检测完成的回调记录（callbackTime为空）&lt;br&gt;self-interview/add&amp;nbsp; 自主面试添加考生（这里的callback为空，即非猎聘考生不回调）" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d79b00;strokeWidth=1;align=left;fillColor=#ffe6cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-50" y="840" width="709" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-42" value="CheatStatusUpdateHandler.dohandler会处理作弊检测完成的事件，先判断是否有有未回调的记录，如有则修改callbacktime为当前时间，没有则判断是否有回调过的记录，有的话就新增一条" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d79b00;strokeWidth=1;align=left;fillColor=#ffe6cc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-46" y="853" width="636" height="60" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-42" value="CheatStatusUpdateHandler.dohandler会处理作弊检测完成的事件，先判断是否有有未回调的记录，如有则修改callbacktime为当前时间，没有则判断是否有回调过的记录，有的话就新增一条" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#d79b00;strokeWidth=1;align=left;fillColor=#ffe6cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-50" y="949" width="636" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-46" value="" style="endArrow=classic;html=1;entryX=-0.017;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="0lGR8tY5QTlnWh_6op-8-39">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-46" value="" style="endArrow=classic;html=1;entryX=-0.017;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="0lGR8tY5QTlnWh_6op-8-39" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="604" y="885" as="sourcePoint" />
-            <mxPoint x="566" y="950" as="targetPoint" />
+            <mxPoint x="600" y="981" as="sourcePoint" />
+            <mxPoint x="562" y="1046" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-47" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-47" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="665" y="766" as="sourcePoint" />
-            <mxPoint x="803" y="857" as="targetPoint" />
+            <mxPoint x="661" y="862" as="sourcePoint" />
+            <mxPoint x="799" y="953" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-48" value="&lt;div&gt;&amp;nbsp; TEST_USER_DELETE(8, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;考生被删除&quot;),&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="806" y="991" width="231" height="49" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-48" value="&lt;div&gt;&amp;nbsp; TEST_USER_DELETE(8, CTS_TEST,&lt;/div&gt;&lt;div&gt;&amp;nbsp;&quot;考生被删除&quot;),&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#82b366;strokeWidth=1;fillColor=#d5e8d4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="802" y="1087" width="231" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-49" target="0lGR8tY5QTlnWh_6op-8-48">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0lGR8tY5QTlnWh_6op-8-49" target="0lGR8tY5QTlnWh_6op-8-48" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-49" value="试卷删除时间，&lt;br&gt;papers/user/ats/cts-test-user 第三方删除考生，papers/{paperId:[0-9]+}/test_users&lt;br&gt;/{paperId:[0-9]+}/test_users/{id:[0-9]+} 笔试系统删除考生&lt;br&gt;papers/candidates/delete&amp;nbsp; 海外版删除考生&lt;br&gt;&lt;br&gt;上面的4中情况都会生产考生删除消息事件&lt;br&gt;DeleteCtsTestUserHandler处理考生删除事件：先查询该考生的考试完成的记录，&lt;br&gt;如果查到了就修改该记录的type为考生删除，callbackTime改为当前&lt;br&gt;没查到则新增一条type为考生删除且回调时间是当前的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-46" y="953.5" width="599" height="124" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-49" value="试卷删除时间，&lt;br&gt;papers/user/ats/cts-test-user 第三方删除考生，papers/{paperId:[0-9]+}/test_users&lt;br&gt;/{paperId:[0-9]+}/test_users/{id:[0-9]+} 笔试系统删除考生&lt;br&gt;papers/candidates/delete&amp;nbsp; 海外版删除考生&lt;br&gt;&lt;br&gt;上面的4中情况都会生产考生删除消息事件&lt;br&gt;DeleteCtsTestUserHandler处理考生删除事件：先查询该考生的考试完成的记录，&lt;br&gt;如果查到了就修改该记录的type为考生删除，callbackTime改为当前&lt;br&gt;没查到则新增一条type为考生删除且回调时间是当前的回调记录" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;strokeColor=#9673a6;strokeWidth=1;align=left;fillColor=#e1d5e7;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-50" y="1049.5" width="599" height="124" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-51" value="如果是liepin，并且callback为空那就直接给callback填充来自hrconfig的猎聘url" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;shadow=0;glass=0;dashed=1;strokeWidth=1;dashPattern=1 4;strokeColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-51" value="如果是liepin，并且callback为空那就直接给callback填充来自hrconfig的猎聘url" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;shadow=0;glass=0;dashed=1;strokeWidth=1;dashPattern=1 4;strokeColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-105" y="805" width="523" height="27" as="geometry" />
         </mxCell>
-        <mxCell id="0lGR8tY5QTlnWh_6op-8-54" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#000000;strokeWidth=1;fillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="775" y="135" width="302" height="933" as="geometry" />
+        <mxCell id="0lGR8tY5QTlnWh_6op-8-54" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=#000000;strokeWidth=1;fillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="773" y="150.5" width="302" height="1023" as="geometry" />
+        </mxCell>
+        <mxCell id="8CEnL3YHeLzm9LXkc-NZ-2" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;DoneCtsTestEventHandler接受到考试结束的消息，会先判断该考生是否有初始的回调（tryCount=0,类型为考试结束）&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;如果有：开始该条回调：callback设置为当前时间，calbackUrl设置为hr用户配置的&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;如没有：添加一条回调时间为当前时间的回调&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-43" y="550" width="522" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8CEnL3YHeLzm9LXkc-NZ-3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8CEnL3YHeLzm9LXkc-NZ-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="562" y="523" as="sourcePoint" />
+            <mxPoint x="812" y="432" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
