@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-17T09:14:52.307Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="3TjzEWMgCKg1ENP2TtFV" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-17T09:22:25.174Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="XiiZ821kVBx5h0C-2j1r" version="15.9.6" type="github">
   <diagram id="ZIT2p8z2Ug1slTPCqt-a" name="Page-1">
     <mxGraphModel dx="946" dy="588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -118,8 +118,11 @@
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-52" value="服务交互" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="77" y="1135" width="58" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IlgtQLgBsTsGuMDCGDZd-53" target="IlgtQLgBsTsGuMDCGDZd-54">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="1414" as="sourcePoint" />
+            <mxPoint x="376" y="1414" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-53" value="组卷服务" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="251.5" y="1384" width="120" height="60" as="geometry" />
@@ -179,6 +182,26 @@
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-73" value="http" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IlgtQLgBsTsGuMDCGDZd-72">
           <mxGeometry x="0.0989" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-74" value="&lt;span&gt;kfaka&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="436" y="1505" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-75" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="351" y="1454" as="sourcePoint" />
+            <mxPoint x="430" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-77" value="组卷信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IlgtQLgBsTsGuMDCGDZd-75">
+          <mxGeometry x="-0.3313" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-76" value="更新试题使用信息" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="508" y="1531" as="sourcePoint" />
+            <mxPoint x="558" y="1456" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
