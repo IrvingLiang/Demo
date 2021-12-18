@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-18T03:07:59.252Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="ABHUJ5OcnQDGlijdvOwz" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-18T04:11:45.778Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="py__DcPtRM2th_m3kFSi" version="15.9.6" type="github">
   <diagram id="ZIT2p8z2Ug1slTPCqt-a" name="Page-1">
-    <mxGraphModel dx="946" dy="2248" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -202,22 +202,58 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-78" value="试卷结构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="23" y="1622" width="58" height="18" as="geometry" />
-        </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-79" value="固定试题" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="164" y="1678" width="58" height="18" as="geometry" />
-        </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-80" value="随机试题" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="166" y="1709" width="58" height="18" as="geometry" />
-        </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-81" value="目录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="168" y="1740" width="34" height="18" as="geometry" />
-        </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-82" value="试卷必须属性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="169.5" y="1771" width="82" height="18" as="geometry" />
+          <mxGeometry x="43" y="1653" width="58" height="18" as="geometry" />
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-83" value="试卷状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="61" y="67" width="58" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-85" value="试卷" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="46" y="1869" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-86" value="固定试题信息" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="1681" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-87" value="随机试题" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="1775" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-88" value="目录" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="1857" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-89" value="试卷必须属性：名称，id，版本号，业务id，业务类型，考生时间等。。。" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="1949" width="304" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-90" value="其他属性：考生录入信息，是否开启举报中心。。。" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="2045" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-91" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="146" y="1852" as="sourcePoint" />
+            <mxPoint x="265" y="1728" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-92" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="175" y="1874" as="sourcePoint" />
+            <mxPoint x="268" y="1814" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-93" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="172" y="1902" as="sourcePoint" />
+            <mxPoint x="269" y="1891" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-95" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="176" y="1925" as="sourcePoint" />
+            <mxPoint x="262" y="1974" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-96" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="107" y="1939" as="sourcePoint" />
+            <mxPoint x="268" y="2068" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
