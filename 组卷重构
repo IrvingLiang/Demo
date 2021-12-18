@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-18T02:56:12.506Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="UJ_5p1FGQGMrPzeaf-tG" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-18T03:07:59.252Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="ABHUJ5OcnQDGlijdvOwz" version="15.9.6" type="github">
   <diagram id="ZIT2p8z2Ug1slTPCqt-a" name="Page-1">
-    <mxGraphModel dx="946" dy="588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="2248" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -124,19 +124,19 @@
             <mxPoint x="376" y="1414" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-53" value="组卷服务" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-53" value="组卷服务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="251.5" y="1384" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-54" value="题库中台" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-54" value="题库中台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="518.5" y="1384" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-56" value="open feign" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="402.5" y="1400" width="66" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-58" value="其他系统" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-58" value="其他系统" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="243.5" y="1194" width="113" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-61" value="kfaka" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-61" value="kfaka" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="504" y="1232" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-63" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -181,7 +181,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IlgtQLgBsTsGuMDCGDZd-74" value="&lt;span&gt;kfaka&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-74" value="&lt;span&gt;kfaka&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="436" y="1505" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-75" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -215,6 +215,9 @@
         </mxCell>
         <mxCell id="IlgtQLgBsTsGuMDCGDZd-82" value="试卷必须属性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="169.5" y="1771" width="82" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="IlgtQLgBsTsGuMDCGDZd-83" value="试卷状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="61" y="67" width="58" height="18" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
