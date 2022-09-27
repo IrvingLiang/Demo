@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-27T08:31:05.079Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="xdkEwgjL5e2wj_hsev_p" version="20.3.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-27T08:33:51.414Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="vFskS3igIicnIH2yzrsr" version="20.3.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2381" dy="711" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -140,8 +140,11 @@
         <mxCell id="E0-j0r0eiWljynC2p4oD-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="E0-j0r0eiWljynC2p4oD-69" target="E0-j0r0eiWljynC2p4oD-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="E0-j0r0eiWljynC2p4oD-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="E0-j0r0eiWljynC2p4oD-69" target="E0-j0r0eiWljynC2p4oD-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="E0-j0r0eiWljynC2p4oD-69" value="«interface»&lt;br&gt;&lt;b&gt;BeanFactory（定义基本行为）&lt;/b&gt;" style="html=1;strokeColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="199" y="931" width="203" height="50" as="geometry" />
+          <mxGeometry x="199" y="931" width="203" height="49" as="geometry" />
         </mxCell>
         <mxCell id="E0-j0r0eiWljynC2p4oD-70" value="顶层接口：查找，是否单例，类型匹配等" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-41" y="945" width="234" height="26" as="geometry" />
