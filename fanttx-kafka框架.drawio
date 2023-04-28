@@ -1,9 +1,18 @@
-<mxfile host="app.diagrams.net" modified="2023-04-28T04:04:57.288Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.2.3" etag="PRJbJBcqYokHmEnFckWA" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-28T04:17:37.744Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="2UCqddZtuZVij7yBbidW" version="21.2.3" type="github">
   <diagram name="第 1 页" id="ldlYSySZRPUg6WXVIPtm">
-    <mxGraphModel>
+    <mxGraphModel dx="2838" dy="1108" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="0Gl9hoYvocWFONpUa8cy-1" value="1、消费类：继承AbsSMQMsgConsumer&lt;br&gt;2、构造方法中赋值topic，消费者组&lt;br&gt;3、@PostConstruct注解在bean注入之后执行运行方法&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;向消费者管理类：SMQConsumeFacade 注册当前的消费者类&lt;br&gt;4、3中会启动一个线程用于循环消费" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-146" y="122" width="371" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="0Gl9hoYvocWFONpUa8cy-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;SMQConsumeFacade&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;consumeProcess&lt;span style=&quot;background-color: initial;&quot;&gt;(): Type&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;subscribeTopic（）//&amp;nbsp; 订阅&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;consumeMsg（） // 消费&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="523" y="157" width="277" height="187" as="geometry" />
+        </mxCell>
+        <mxCell id="0Gl9hoYvocWFONpUa8cy-4" value="消费者门面" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="618" y="90" width="78" height="26" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
