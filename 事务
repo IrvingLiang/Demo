@@ -4,3 +4,6 @@
 2、如果A不加@Transactional注解，只有B加@Transactional注解，AB方法为同一类，事务失效；AB不同类，只有B有事务；
     要想AB方法为同一类，解决事务失效：可以在属性中注入本身，然后调用B方法
 3、如果A不加@Transactional注解，B不加@Transactional注解，则没有事务；
+
+另外：
+    有事务方法调用有事务的方法，具体的事务情况，还要看事务具体的传播规则
