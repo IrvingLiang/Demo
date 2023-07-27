@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T13:00:10.161Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="A279inlDHg4i3IUzfbcd" version="21.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T15:24:27.842Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="0m43HSPLDXt0GlRvqJ8K" version="21.6.5" type="github">
   <diagram name="第 1 页" id="M8W_YHe2GnGrzic8frZs">
-    <mxGraphModel dx="2436" dy="886" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2927" dy="1160" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,95 +111,172 @@
         <mxCell id="dHo2H_a6wfimzC4ZJmC2-37" value="构造能耗数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" parent="1" vertex="1">
           <mxGeometry x="436" y="485" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dHo2H_a6wfimzC4ZJmC2-38" target="iF39fZA0TQ3YI6n5g9AD-14">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="dHo2H_a6wfimzC4ZJmC2-38" target="iF39fZA0TQ3YI6n5g9AD-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dHo2H_a6wfimzC4ZJmC2-38" value="time-collected，resource-id，&lt;br&gt;current-power" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" parent="1" vertex="1">
           <mxGeometry x="711" y="273" width="265" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iF39fZA0TQ3YI6n5g9AD-1" target="iF39fZA0TQ3YI6n5g9AD-18">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iF39fZA0TQ3YI6n5g9AD-1" target="iF39fZA0TQ3YI6n5g9AD-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-1" value="per-onu-energy-consumption" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-1" value="per-onu-energy-consumption" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" parent="1" vertex="1">
           <mxGeometry x="716" y="375" width="265" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-3" value="ne-name，ne-ip-address" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-3" value="ne-name，ne-ip-address" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="719" y="484" width="265" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-4" value="energy-consumption" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-4" value="energy-consumption" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="716" y="584" width="243" height="63" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iF39fZA0TQ3YI6n5g9AD-5" target="iF39fZA0TQ3YI6n5g9AD-4">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iF39fZA0TQ3YI6n5g9AD-5" target="iF39fZA0TQ3YI6n5g9AD-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-5" value="根据原始数据中的电流，电压计算获取周期能耗" style="whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-5" value="根据原始数据中的电流，电压计算获取周期能耗" style="whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="1095" y="585" width="193.5" height="60.5" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iF39fZA0TQ3YI6n5g9AD-8" target="iF39fZA0TQ3YI6n5g9AD-3">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iF39fZA0TQ3YI6n5g9AD-8" target="iF39fZA0TQ3YI6n5g9AD-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-8" value="1、网元能耗表" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="1">
-          <mxGeometry x="1087" y="477" width="120" height="60" as="geometry" />
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-8" value="1、网元能耗表" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" parent="1" vertex="1">
+          <mxGeometry x="1095" y="484" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-14" value="直接从原始消息中的获取&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-14" value="直接从原始消息中的获取&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="1084" y="273" width="176.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-17" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="iF39fZA0TQ3YI6n5g9AD-16" target="iF39fZA0TQ3YI6n5g9AD-14">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-17" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iF39fZA0TQ3YI6n5g9AD-16" target="iF39fZA0TQ3YI6n5g9AD-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-16" value="current-power：直接从原始消息中的获取&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-16" value="current-power：直接从原始消息中的获取&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="937" y="136" width="257" height="33" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-18" value="根据onu-number字段和energy-consumption值，计算每ONU平均能耗， ONU个数为空时或者能耗为0时，显示为“-”" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-18" value="根据onu-number字段和energy-consumption值，计算每ONU平均能耗， ONU个数为空时或者能耗为0时，显示为“-”" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="1081" y="375" width="314" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-20" value="onu-number" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-20" value="onu-number" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="719" y="702" width="244" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="iF39fZA0TQ3YI6n5g9AD-21" target="iF39fZA0TQ3YI6n5g9AD-20">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="iF39fZA0TQ3YI6n5g9AD-21" target="iF39fZA0TQ3YI6n5g9AD-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-21" value="2、从数据库能耗小时表中获取个数， 数据库值为空，显示为 “-”&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-21" value="2、从数据库能耗小时表中获取个数， 数据库值为空，显示为 “-”&lt;span style=&quot;font-size:10.5pt;font-family:宋体;&lt;br/&gt;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="1087" y="702" width="276" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-31" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="dHo2H_a6wfimzC4ZJmC2-38">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-31" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="dHo2H_a6wfimzC4ZJmC2-38" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="453" y="469" as="sourcePoint" />
             <mxPoint x="503" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-33" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-33" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="453" y="469" as="sourcePoint" />
             <mxPoint x="503" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-3">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="453" y="469" as="sourcePoint" />
             <mxPoint x="503" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-4">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dHo2H_a6wfimzC4ZJmC2-37" target="iF39fZA0TQ3YI6n5g9AD-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="453" y="469" as="sourcePoint" />
             <mxPoint x="503" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-36" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="iF39fZA0TQ3YI6n5g9AD-20">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-36" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="iF39fZA0TQ3YI6n5g9AD-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="560" y="517" as="sourcePoint" />
             <mxPoint x="503" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-37" value="0.创建topic,第一个已有，创建第二个&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;1、怎么创建topic&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;2、查看已有topic消息&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;3、测试环境的topic跟线上有差异吗&lt;br&gt;订阅kafka&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;已有框架的订阅逻辑是什么样的&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;消息重试的机制&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;消息重复消费的考虑与处理&lt;br&gt;实现消费逻辑&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;1.解析消息&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;消息解析的工具&lt;br&gt;2.构造待发送消息体&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;1、从原消息获取time-collected，resource-id，&lt;span style=&quot;&quot;&gt;current-power&lt;br&gt;&lt;/span&gt;2、从数据库能耗小时表中获取ONU-number&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1、有没有现有接口&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;2、表名，service接口&lt;br&gt;3、根据原始数据中的电流，电压计算获取周期能耗energy-consumption（参考已有逻辑）&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;1、现有逻辑的计算规则&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;2、是否有工具类还是能自动计算&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;4、根据2和3得到的onu-number，energy-consumption计算平均ONU 能耗&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&amp;nbsp; &amp;nbsp;1、保留几位小数？&lt;br&gt;&lt;/blockquote&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&amp;nbsp; &amp;nbsp; 5、从网元能耗表获取ne-name，ne-ip-address&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;border: none; margin: 0px 0px 0px 40px; padding: 0px;&quot;&gt;1、有没有现有接口&lt;/blockquote&gt;&lt;blockquote style=&quot;border: none; margin: 0px 0px 0px 40px; padding: 0px;&quot;&gt;	2、表名，service接口&lt;/blockquote&gt;&lt;/blockquote&gt;3.生产消息&lt;br&gt;4.消息确认" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-37" value="0.创建topic,第一个已有，创建第二个&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;1、怎么创建topic&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;2、查看已有topic消息&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;3、测试环境的topic跟线上有差异吗&lt;br&gt;订阅kafka&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;已有框架的订阅逻辑是什么样的&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;消息重试的机制&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;消息重复消费的考虑与处理&lt;br&gt;实现消费逻辑&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;1.解析消息&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;消息解析的工具&lt;br&gt;2.构造待发送消息体&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;1、从原消息获取time-collected，resource-id，&lt;span style=&quot;&quot;&gt;current-power&lt;br&gt;&lt;/span&gt;2、从数据库能耗小时表中获取ONU-number&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1、有没有现有接口&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;2、表名，service接口&lt;br&gt;3、根据原始数据中的电流，电压计算获取周期能耗energy-consumption（参考已有逻辑）&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;1、现有逻辑的计算规则&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;2、是否有工具类还是能自动计算&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;4、根据2和3得到的onu-number，energy-consumption计算平均ONU 能耗&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp;1、保留几位小数？&lt;br&gt;&lt;/blockquote&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp; 5、从网元能耗表获取ne-name，ne-ip-address&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;border: none; margin: 0px 0px 0px 40px; padding: 0px;&quot;&gt;1、有没有现有接口&lt;/blockquote&gt;&lt;blockquote style=&quot;border: none; margin: 0px 0px 0px 40px; padding: 0px;&quot;&gt; 2、表名，service接口&lt;/blockquote&gt;&lt;/blockquote&gt;3.生产消息&lt;br&gt;4.消息确认" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="87" y="666" width="533" height="386" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-39" value="如果异步实现，那就跟kafka的机制完全脱离了，消费失败怎么办，就永远丢失了，要不要补一个消息&lt;br&gt;按道理不相关的消费逻辑应该放在两个消费者里，是否要再创建一个topic，单独对这个topic进行消费" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-39" value="如果异步实现，那就跟kafka的机制完全脱离了，消费失败怎么办，就永远丢失了，要不要补一个消息&lt;br&gt;按道理不相关的消费逻辑应该放在两个消费者里，是否要再创建一个topic，单独对这个topic进行消费" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-41" y="1078" width="551" height="41" as="geometry" />
         </mxCell>
-        <mxCell id="iF39fZA0TQ3YI6n5g9AD-40" value="https://blog.csdn.net/oocharlesxx_test/article/details/126098083#_178" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="iF39fZA0TQ3YI6n5g9AD-40" value="https://blog.csdn.net/oocharlesxx_test/article/details/126098083#_178" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="577" y="1075" width="389" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-1" target="vTuSlHbS3e6EODC16ytk-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-1" value="消息发送" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="-292.5" y="1422" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-4" target="vTuSlHbS3e6EODC16ytk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-4" target="vTuSlHbS3e6EODC16ytk-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-121.67999999999977" y="1213.0000000000002" as="targetPoint" />
+            <mxPoint x="-123.99697368420986" y="1575.607368421053" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-68" y="1569" />
+              <mxPoint x="-68" y="1213" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-4" value="发送成功" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-291.5" y="1529" width="117" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-11" target="vTuSlHbS3e6EODC16ytk-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-11" value="正常返回" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="-293" y="1702" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-15" target="vTuSlHbS3e6EODC16ytk-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-15" target="vTuSlHbS3e6EODC16ytk-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-352.99999999999955" y="1370.9999999999995" as="sourcePoint" />
+            <mxPoint x="-596" y="1543" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-391" y="1332" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-15" value="次数&amp;lt;3" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-291.5" y="1292" width="117" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-20" target="vTuSlHbS3e6EODC16ytk-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-391" y="1872" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-20" value="抛出异常给业务侧" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-451" y="1590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-22" value="NO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-154" y="1540" width="36" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-25" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-275" y="1628" width="42" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vTuSlHbS3e6EODC16ytk-29" target="vTuSlHbS3e6EODC16ytk-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-29" value="开始&lt;br&gt;（初始化次数为0）" style="whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="-292.5" y="1183" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-32" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="1372" width="42" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-34" value="NO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-352" y="1302" width="36" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-36" value="结束" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="-293" y="1843" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vTuSlHbS3e6EODC16ytk-41" value="次数+1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-128" y="1396" width="56" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
