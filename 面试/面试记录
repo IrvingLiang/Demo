@@ -1,2 +1,3 @@
 明朝万达：nacos，synchornized，lock，redis，垃圾回收器及算法，volatile，内存屏障（可见性，有序性），kafka
           kafka集群的原理：槽位分配给集群节点，每个节点又会部署主从，所有的消息会根据槽位来决定分配给哪些集群节点   参考链接：https://zhuanlan.zhihu.com/p/337878020 
+          volatile 使用场景：单例模式：volatile Instance = new Instance(); 创建实例的过程：分配空间，实例化，将引用赋值为分配的空间，如果不使用volatile则会导致线程拿到的是null，即先把引用赋值为分配的空间，再实例化
