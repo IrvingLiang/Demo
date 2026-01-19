@@ -1,0 +1,156 @@
+安全IO, Java 基础, NIO Selector, Buffer, 多
+, 类加载器, GC, 数据类型, 反射, 集合（Collections）, 栈帧, JVM, 异常, 泛型, Clone, 排版, Stream, ORM框架, 序列化, 继承、重载、覆盖, 黑盒测试, 组合测试, Linux chmod权限, 正则
+(参考：https://blog.csdn.net/oocharlesxx_test/article/details/126098083#_178)
+
+安全
+	• 不安全的算法： 
+		○ AES-ECB：
+		○ DES：
+			§ 在之前很难对他穷举，但是随着计算机性能的进步和对该算法的捷径，56位密码不够长了，des算法可以被穷举
+		○ MD5：每个原始都会生成一个对应的固定密码，虽然是不可逆的，但可以被穷举
+	• 安全加密算法：RSA，DSA/ECDSA和加入盐值SHA256 , AES-GCM
+		○ 选择AES时需要注意是否切换为GCM模式，默认的ECB模式不安全
+		○ RSA算法需要将证书长度设置为超过2048才算安全算法
+	• 输入校验不能检验CSRF攻击
+		○ CSRF攻击：用户正常登陆A网站后，黑客诱导用户打开黑客的网站，该网站读取浏览器的用户登陆信息，并访问黑客网站的请求，黑客就可以攻击A网站了
+	• 不要使用XMLDecoder进行反序列化操作
+		○ XMLDecoderD是java中的一个反序列化的工具，在JDK1.4-11中存在反序列化安全漏洞
+		○ 如果将一行命令按照对象的格式（如：new java.lang.ProcessBuilder(new String[]{"calc"}).start();，ProcessBuilder是类，其他两个是属性）进行组装成xml的格式，反序列化时就会转成一行命令并执行
+	• 一个对象存入Hash集合后hashcode随即发生变化会导致内存泄漏
+		○ hashcode是对象在jvm的堆上的内存地址或字符串的值，怎么会发生变化？发生变化除非是自己重写了hashcode，重写的算法会导致重复
+	
+	• 敏感数据传输先前面再加密
+	• 数值运算，建议使用先决条件检查、Math.*Exact()方法、向上类型转换等方式防止溢出
+	• 文件路径校验前必须先进行标准化处理，建议使用getCanonicalPath()
+	• 从ZipInputStream中解压文件必须进行安全检查
+		○ 解压出的标准化路径文件在解压目标目录之外
+		○ 解压的文件消耗过多的系统资源
+	• 不要依赖平台默认的字符编码方式，使用UTF-8
+	• 字符串大小写转换（String类的toUpperCase()和toLowerCase()方法、format()方法）必须加上Locale.ROOT或Locale.ENGLISH
+	• 个人数据：自然人的email地址、电话号码、生物特征（指纹）、位置数据、IP地址、医疗信息、宗教信仰、社保号、婚姻状态、银行卡、口令、身份证、护照号等。
+	• 敏感个人数据：工会成员信息、个人信仰观念（政治、信仰、党派、宗教、性取向）、个人种族信息、犯罪处分负向记录、权威社会识别标识（政府等权威机构发布的能够唯一识别到用户的标识符，一般终身不可重置）、身份认证凭据、生物特征、健康信息、金融帐号标识
+	• SQL注入：
+		○ 使用参数化查询：最有效的防护手段，对于sql语句中的表名、字段名、部分场景下的in条件不适用；
+		○ 对不可信数据进行白名单校验：适用于拼接sql语句中的表名、字段名
+		○ 对不可信数据进行转码：仅适用于SQL语句中由单引号或双引号限制的字段
+	• XML：
+		○ xml实体解析导致的安全风险：XXE, 内部实体扩展
+		○ 针对XML数据应用的攻击：XPath，XXE, 内部实体扩展
+		○ 防止XML注入不包括使用XML Schema或 DTD校验
+		○ DOS攻击：
+			§ 敏感异常：
+				• Java.lang.OutOfMemoryError
+				• Java.lang.StackOverflowError
+				• javax.naming.InsufficientResourcesException
+	• 数据校验
+		不可信数据进行校验时，禁止使用assert
+		"白名单"方式净化的方式包括删除，编码 ，替换
+		
+	• IO
+		Runtime.exec()方法与相关联的ProcessBuilder.start()方法可以用来调用外部程序进程，这些外部程序运行时Process对象会产生哪些流
+		输入流，输出流，错误流
+		规则6.2 禁止将Buffer对象封装的数据暴露给不可信代码
+		规则6.3 防止让外部进程阻塞在输入输出流上
+		规则6.4 对于从流中读取一个字符或字节的方法，使用int类型的返回值
+	File:
+		仅创建一个File类实例，Java是不会对文件进行读写的
+		File实例可以判断是否目录或文件，因此文件与文件夹都可以处理
+	字符和字节流
+		Reader 是字符缓存流，可以支持按字符，数组，行来读取。
+		InputSteam是字节缓存流，支持按字节读取文件和二进制数据。
+	Java 基础
+	优先加载静态方法块，再加载父类代码块和构造方法，再加载子类。
+	
+	？： 三元云算符 会返回一个综合类，例如 condition? int: char 会返回一个int
+	
+	如何遍历删除数组元素避免ConcurrentModificationException
+	
+	使用removeIf方法或者Iterator提供的remove方法，用于删除当前元素
+	使用并发集合类来避免ConcurrentModificationException，比如使用CopyOnArrayList，ConcurrentHashMap或者CopyOnWriteArrayList。而不是ArrayList。
+	如果直接使用stream.list.foreach 或者 foreach 中删除则会引发ConcurrentModificationException
+	ArrayList只能删除倒数第二个元素。
+	LinkedList只能删除倒数第二和第一个元素。
+	否则抛出ConcurrentModicationException
+	switch
+	
+	switch不支持boolean，long，float
+	switch中，default都是最后匹配的，如果被匹配到没有break，就会继续往下走。直到执行完或break；
+	Java文件执行顺序选择
+	
+	加载 -> 校验 -> 使用代码
+	父静态代码块> 子静态代码块> 父代属性初始化> 父代码块> 父构造函数> 子代属性初始化> 子代码块> 子构造函数
+	interface的默认修饰符是 public static final
+	
+	try catch final
+	
+	不管有没有出现异常，finally块中代码都会执行；
+	当try和catch中有return时，finally仍然会执行；
+	finally是在return后面的表达式运算后执行的（此时并没有返回运算后的值，而是先把要返回的值保存起来，不管finally中的代码怎么样，返回的值都不会改变，任然是之前保存的值），所以函数返回值是在finally执行前确定的；
+	finally中最好不要包含return，否则程序会提前退出，返回值不是try或catch中保存的返回值。
+	在final中执行代码发生异常时，直接忽略或仅记录日志，否则会导致finally代码块无法正常结束。进而导致try catch中的异常的抛出，也会影响返回值。
+	Optional 类：
+		禁止对Optional对象赋值/返回为null，或与null比较；
+		不应该返回 Optional<'Integer> 、 Optional<'Long> 、 Optional<'Double> ，而应该使用
+		OptionalInt 、 OptionalLong 、 OptionalDouble
+		java使用DatagramPacket来打包数据，使用DatagramSocket来发送和接收数据.
+		
+		Path中没有exists、isExists方法，Files中没有isExists方法
+		
+		fetchSize控制了JDBC每次读取数据的行数，越大性能越高，太大可能会内存溢出（OOM）
+NIO Selector
+	一个Selector对应多个Channel，一个选择器最多可以同时被63个通道
+	注册监听事件：Connect,Accept,Read,Write
+	Java普通IO是面向流的，NIO是面向缓冲区的
+	Selector等事件就绪后才会返回，避免IO阻塞，NIO各种流是非阻塞的，如果没有数据可用也不会阻塞线程
+	Selector是Channel的复用器，不用Close
+Buffer
+	flip()方法将Buffer从写模式切换到读模式，将position值重置为0，limit的值设置为之前的position值
+	BufferedReader是字符缓存流，能够更有效地读取字符、数组和行，提供按行读取的功能。
+	BufferedInputStream是字节缓存流，能够按字节读取文件流，不仅能够读取文本文件，还能读取二进制数据，无按行读取的功能
+	wrap()、slice()、duplicate()这些方法会创建一个新的buffer对象，但是修改这个新的buffer对象会导致原始的封装数据也被修改，反之亦然。
+多线程
+	Synchronized
+		使用Synchronized锁某个对象时，只有地址相同才会互斥：
+		例：
+		public String a = “123”
+		synchronized(a) {…}
+		a对象引用的是常量池中的“123”的String的地址，如果在别的线程中也锁住了该地址，则会造成竞争
+		public String a = new String(“123”)
+		a对象引用的是新声明的字符串的地址，不会与其他线程造成竞争。
+		synchronized修饰非静态方法时，锁住的是当前实例；
+		synchronized修饰静态方法时，锁住的是该类的Class对象；
+		synchronized修饰静态代码块时，锁住的是synchronized关键字后面括号内的对象。
+		synchronized的代码块具有原子性。
+		在异常条件下，同步方法或者块同步中使用的对象内置锁会自动释放。
+	
+	violated
+		volatile无法实现原子性，只能实现可见性
+		使用volatile在效率上比较低。
+		当且仅当满足以下所有条件时，才应该使用volatile变量：
+			* 对变量的写入操作不依赖变量的当前值，或者你能确保只有单个线程更新变量的值。 * 该变量没有包含在具有其他变量的不变式中，防止影响其他变量？？ * 防止代码重排
+		Sleep是Thread的方法，不会释放锁。
+		Wait是Object的方法，会释放锁，通过notify或notifyAll唤醒。wait必须在synchronize中
+		Join的底层也是调用了Wait，所以也会释放锁。
+		yield不会释放锁，而是会释放CPU给更高优先级的线程
+		实现多线程：
+			扩展类Thread
+			实现Runnable接口
+			实现Callable接口
+				与Runnable的区别：Callable的任务执行后可返回值，call方法可以抛出异常，运行Callable任务可以拿到一个Future对象，表示异步计算的结果
+			
+	线程安全：
+		Java多线程程序中，线程不允许抛出未捕获的Checked Exception
+		Java多线程程序中，建议使用Thread对象的setUncaughtExceptionHandler方法注册Runtime异常的处理者
+	Semaphore
+		定义n个处理器，线程调用acquire尝试获取处理器权限，否则阻塞。完成后调用release释放。Semaphore(int n, boolean isFair)，第二个入参定义是否是按顺序获取权限。如果信号量（处理器）为负数（-n），则代表有n个进程正在等待进入临界区。（临界区为Semaphore保护起来的区域）
+		每wait一次 semaphore都会-1，每signal一次都会让semaphore+1。假设semaphore初始值为2，经过操作后变为-2，则代表现在有2个线程已在临界区，还有2个在临界区外。
+	CountDownLatch
+		定义一个数字，每countDown便-1，为0时释放权限；为0时，无法重置。
+	Interrupt：
+		如果线程阻塞时，将抛出InterruptException
+		不推荐使用stop()
+		调用interrup()后不会直接中断线程，而是给目标线程中断信号，目标线程中断标记置为true
+		正常的退出方式是在run中检查isInterrupted，然后抛出异常来退出(或者return)；
+		线程本身用Thread.interrupted() 方法检查自己是否被中止。
+		注意，不可以使用 Thread.current().isInterrupted() 检查自己是否被interrupt，因为isInterrupted() 不会
+		清除一个线程的interrupted status
