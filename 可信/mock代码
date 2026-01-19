@@ -1,0 +1,65 @@
+1、mock私有属性
+	        PowerMockito.mockStatic(SafeMapOper.class);
+	        PowerMockito.suppress(PowerMockito.constructor(SafeMapOper.class));
+	        SafeMapOper configMap = PowerMockito.mock(SafeMapOper.class);
+	        Whitebox.setInternalState(dao,"regionStatisticsCacheMap",configMap);
+	        Whitebox.setInternalState(dao,"deviceStatusGroupCacheMap",configMap);// mock非静态私有属性
+		(Foo.class, b);  // mock静态私有属性
+2、一个方法多次调用返回不同结果
+3、如果String的参数为null，则Mockito.anyString()不会被匹配到
+
+PowerMockito.mockStatic(Stringutil.class);
+PowerMockito. when(StringUtil .isCanEmptyAndValic(Mockito. any(),
+Mockito.anyInt()))
+.thenReturn( t: false) 
+.thenReturn( t: true)
+.thenReturn( t: true)
+.thenReturn( t: trve);
+Assert.assertFalse(obj.validate());
+Assert.assertTrue(obj.validate());
+
+4、指定mock对象抛出异常（注意如果方法中未声明会抛出异常，只能指定抛出运行时异常，如果仍指定为抛出受检查异常，运行时会报错误org.mockito.exceptions.base.MockitoException: Checked exception is invalid for this method!）：
+参考链接：https://3ms.huawei.com/km/blogs/details/13010339
+
+public void test_run_should_doNothing_when_getJedisError() {
+ PowerMockito. when(business. getFailedAndRunningInstantExport())
+.thenReturn(Collections.singletonList(new ExportTask()));
+ PowerMockito. when(ConfFileUtil. getSysConfByApp()) . thenThrow(RuntimeException.class) ;
+正确：抛出运行时异常
+task.run();
+C30010734，2022/7/2815:44·[DTS2022072807687][fix]【开发自提单】Manager周期任务余代码清理
+ Assert.assertNotNull(task);
+@Test 
+ public void test_run_should_doNothing_when_getFailedAndRunningInstantExportError() {
+ PowerMockito.mockStatic(ConnRedis.class);
+ PowerMockito.when(ConnRedis.getJedis()).thenReturn(jedis);
+不正确
+
+ PowerMockito. when(business.getFailedAndRunningInstantExport())
+thenThrow(ServiceException.class);
+task.run();
+Assert
+(ask)
+
+
+5、mock一个创建对象的行为 ：new xxx
+	 PowerMockito.whenNew(SafeMapOper.class).withAnyArguments().thenReturn(redisMap);
+6、调用私有方法
+	        Whitebox.invokeMethod(helper, "checkSdPreNeTaskValid", preNeInfo);
+7、mock掉一个静态方法
+
+8、mock接口的属性(默认静态)
+	注意：以下的mock代码要写在测试方式里，bedoreclass中不生效
+属性一定是绑定在实例上的，这里看接口的属性其实也是绑定在接口本身的实例上的，接口不是一个简单的class定义文件
+
+
+deviceMgrBusiness.updateDeviceStatusGroupcache() ;
+ SafeMapoper<String> regionStatisticsCacheMap = PowerMockito.mock(SafeMapoper.class);
+ HashMap<String, String> result = new HashMap<>();
+result.put("1","100");
+ PowerMockito.when(regionStatisticsCacheMap.getAll(Mockito.anyString(), Mockito.eq(String.class)))
+.thenReturn(result) ;
+ PowerMockito.mockStatic(CacheConstant.class) ;
+You, Moments ago · Uncommitted changes
+Whitebox.setInternaLState(Cacheconstant. class,
+feldName: "REGION_STATISTICS_CACHE_MAP", regionStatisticsCacheMap);
