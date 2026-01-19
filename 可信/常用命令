@@ -1,0 +1,50 @@
+环境解禁命令
+su root
+bash /opt/SEK/cmd/SetEnv.sh
+修改文件权限与所属组
+chown ossuser:ossgroup aoc_datachange_register.json
+
+查看hfs文件
+ su ossuser /opt/oss/NCE/apps/HOFSOsdFileAgent/bin/hfscmd ls -l fan_acsmanager/sysm/tmpFile/export
+
+ su ossuser /opt/oss/NCE/apps/HOFSOsdFileAgent/bin/hfscmd ls -l fan_acsmanager/sysm/manager/product/img/
+
+su ossuser /opt/oss/NCE/apps/HOFSOsdFileAgent/bin/hfscmd ls -l fan_acsmanager/Mediation/Picture/
+
+su ossuser /opt/oss/NCE/apps/HOFSOsdFileAgent/bin/hfscmd ls -l fan_acsmanager/APFile/
+
+查看总线接口调用日志
+cd /opt/oss/log/NCE/HIROIRService
+zgrep 'updateDeviceCountByStatistics' *
+
+
+查看当前系统时间：date -R 
+grep 'LocalFileProxy' catalina.out 
+Find 搜索
+		find /opt/oss/envs/ -name cer
+Linux文件授权
+	Chown ossuser. *
+log日志搜索(这样搜索可以不带*)
+Cat root.log | grep access
+
+查看spring引入的jar包
+ls --full-time /proc/184433/fd | grep jar > /opt/loadjar.log
+Linux 解压后查询所有文件
+
+Openapi 26335
+
+IR 32018
+
+ER 31943
+
+1. serviceapi：指系统内服务间接口。
+2. innerapi: 指服务的内部接口。
+3. openapi: 指北向开放接口。
+4. opensbi：指Super控制器的南向接口。
+5. webapi：对应当前的ER接口，提供给GUI使用。
+
+参考：https://3ms.huawei.com/km/blogs/details/12854869
+
+Lamda表达式用法：
+	List按每个字段求和：list.stream().mapToInt(process -> process.cpuUsed).sum();
+List多字段排序：list.sorted(Comparator.comparing(Student::getName)).thenComparing(Student::getAge).collect(Collectors.toList()) // 先按name排序，姓名相同则按age排序
