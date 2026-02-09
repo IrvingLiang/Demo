@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
   <diagram name="第 1 页" id="P9QnqRFtEPDTS1eSfiUB">
-    <mxGraphModel dx="1469" dy="707" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3533" dy="1167" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -692,7 +692,7 @@
         <mxCell id="9XlMD5QLJcVHdEb3yzpj-327" edge="1" parent="1" source="9XlMD5QLJcVHdEb3yzpj-323" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9XlMD5QLJcVHdEb3yzpj-324" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9XlMD5QLJcVHdEb3yzpj-323" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="销售&lt;br&gt;&lt;div&gt;申请单&lt;/div&gt;" vertex="1">
+        <mxCell id="9XlMD5QLJcVHdEb3yzpj-323" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="销售&lt;br&gt;&lt;div&gt;订单&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="70" x="1589" y="1046" as="geometry" />
         </mxCell>
         <mxCell id="9XlMD5QLJcVHdEb3yzpj-326" edge="1" parent="1" source="9XlMD5QLJcVHdEb3yzpj-324" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9XlMD5QLJcVHdEb3yzpj-325">
@@ -713,7 +713,7 @@
         <mxCell id="9XlMD5QLJcVHdEb3yzpj-331" edge="1" parent="1" source="9XlMD5QLJcVHdEb3yzpj-328" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9XlMD5QLJcVHdEb3yzpj-330" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9XlMD5QLJcVHdEb3yzpj-328" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="关联销售单并创建&lt;br&gt;&lt;div&gt;销售出库单&lt;/div&gt;" vertex="1">
+        <mxCell id="9XlMD5QLJcVHdEb3yzpj-328" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="关联销售订单并创建&lt;br&gt;&lt;div&gt;销售出库单&lt;/div&gt;" vertex="1">
           <mxGeometry height="44" width="73" x="1587.5" y="1273" as="geometry" />
         </mxCell>
         <mxCell id="9XlMD5QLJcVHdEb3yzpj-333" edge="1" parent="1" source="9XlMD5QLJcVHdEb3yzpj-330" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9XlMD5QLJcVHdEb3yzpj-332">
