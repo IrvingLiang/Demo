@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家族族谱 - 交互式家谱管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --accent: #CD853F;
+            --bg-paper: #FDF5E6;
+            --bg-dark: #2C1810;
+            --line-color: #8B4513;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: var(--bg-paper);
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(205, 133, 63, 0.03) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            overflow-x: auto;
+        }
+
+        .title-font {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        /* Tree CSS */
+        .tree {
+            white-space: nowrap;
+            min-width: fit-content;
+            padding: 40px;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 10px 0 10px;
+            transition: all 0.5s;
+        }
+
+        /* Connectors */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid var(--line-color);
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid var(--line-color);
+        }
+
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 2px solid var(--line-color);
+            border-radius: 0 5px 0 0;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid var(--line-color);
+            width: 0;
+            height: 20px;
+        }
+
+        /* Node Card */
+        .node-card {
+            display: inline-block;
+            padding: 12px;
+            text-decoration: none;
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            min-width: 140px;
+        }
+
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(139, 69, 19, 0.2), 0 4px 6px -2px rgba(139, 69, 19, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .node-card.male {
+            border-color: #2B6CB0;
+            background: linear-gradient(135deg, #EBF8FF 0%, #fff 100%);
+        }
+
+        .node-card.female {
+            border-color: #B83280;
+            background: linear-gradient(135deg, #FFF5F7 0%, #fff 100%);
+        }
+
+        .node-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin: 0 auto 8px;
+            display: block;
+            background: #f0f0f0;
+        }
+
+        .node-card.male .node-avatar {
+            border-color: #4299E1;
+        }
+
+        .node-card.female .node-avatar {
+            border-color: #ED64A6;
+        }
+
+        .node-name {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--bg-dark);
+        }
+
+        .node-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .node-actions {
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .node-card:hover .node-actions {
+            opacity: 1;
+        }
+
+        .btn-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .btn-edit {
+            background: #EDF2F7;
+            color: #4A5568;
+        }
+
+        .btn-edit:hover {
+            background: #4299E1;
+            color: white;
+        }
+
+        .btn-add {
+            background: #F0FFF4;
+            color: #48BB78;
+        }
+
+        .btn-add:hover {
+            background: #48BB78;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #FFF5F5;
+            color: #F56565;
+        }
+
+        .btn-delete:hover {
+            background: #F56565;
+            color: white;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-paper);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 32px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: scale(0.9);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-title {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 28px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--bg-dark);
+            font-size: 14px;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            background: white;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.1);
+        }
+
+        .avatar-upload {
+            width: 100px;
+            height: 100px;
+            border: 3px dashed var(--accent);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background: #FAFAFA;
+            transition: all 0.3s;
+        }
+
+        .avatar-upload:hover {
+            border-color: var(--secondary);
+            background: #FFF8F0;
+        }
+
+        .avatar-upload img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .avatar-placeholder {
+            text-align: center;
+            color: var(--accent);
+            font-size: 12px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn-secondary {
+            background: #EDF2F7;
+            color: #4A5568;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #E2E8F0;
+        }
+
+        .gender-radio {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .gender-option {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .gender-option:hover {
+            border-color: var(--accent);
+        }
+
+        .gender-option.selected {
+            border-color: var(--primary);
+            background: rgba(139, 69, 19, 0.05);
+            font-weight: 600;
+        }
+
+        .gender-option.male-option.selected {
+            border-color: #4299E1;
+            background: #EBF8FF;
+            color: #2B6CB0;
+        }
+
+        .gender-option.female-option.selected {
+            border-color: #ED64A6;
+            background: #FFF5F7;
+            color: #B83280;
+        }
+
+        /* Decorative elements */
+        .corner-decoration {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--primary);
+            opacity: 0.3;
+        }
+
+        .corner-tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        .corner-tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+        .corner-br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        .control-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0 16px;
+            border-right: 1px solid #E2E8F0;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tree li {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tree {
+                padding: 20px 10px;
+            }
+            .node-card {
+                min-width: 120px;
+                padding: 8px;
+            }
+            .node-avatar {
+                width: 48px;
+                height: 48px;
+            }
+            .modal-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="flex items-center gap-4">
+            <h1 class="title-font text-3xl text-amber-900">家族族谱</h1>
+            <span class="text-sm text-gray-500 hidden sm:inline">点击节点进行编辑，悬停显示操作按钮</span>
+        </div>
+        <div class="flex">
+            <div class="stat-item">
+                <div class="stat-value" id="totalCount">0</div>
+                <div class="stat-label">家族成员</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="maleCount">0</div>
+                <div class="stat-label">男性</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="femaleCount">0</div>
+                <div class="stat-label">女性</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="generationCount">0</div>
+                <div class="stat-label">世代</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tree Container -->
+    <div class="tree" id="treeContainer">
+        <ul id="treeRoot"></ul>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button class="control-btn" onclick="zoomIn()" title="放大">+</button>
+        <button class="control-btn" onclick="zoomOut()" title="缩小">-</button>
+        <button class="control-btn" onclick="resetZoom()" title="重置">⟲</button>
+        <button class="control-btn" onclick="exportData()" title="导出数据">💾</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <div class="corner-decoration corner-tl"></div>
+            <div class="corner-decoration corner-tr"></div>
+            <div class="corner-decoration corner-bl"></div>
+            <div class="corner-decoration corner-br"></div>
+            
+            <h2 class="modal-title" id="modalTitle">编辑成员</h2>
+            
+            <form id="memberForm">
+                <input type="hidden" id="memberId">
+                <input type="hidden" id="parentId">
+                
+                <div class="avatar-upload" onclick="document.getElementById('avatarInput').click()">
+                    <img id="avatarPreview" style="display: none;">
+                    <div class="avatar-placeholder" id="avatarPlaceholder">
+                        <div style="font-size: 24px; margin-bottom: 4px;">📷</div>
+                        <div>点击上传头像</div>
+                    </div>
+                </div>
+                <input type="file" id="avatarInput" accept="image/*" style="display: none;" onchange="handleAvatarChange(event)">
+                
+                <div class="form-group">
+                    <label class="form-label">姓名 *</label>
+                    <input type="text" class="form-input" id="nameInput" required placeholder="请输入姓名">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">性别</label>
+                    <div class="gender-radio">
+                        <div class="gender-option male-option" onclick="selectGender('male')">
+                            <span style="font-size: 20px;">👨</span><br>男
+                        </div>
+                        <div class="gender-option female-option" onclick="selectGender('female')">
+                            <span style="font-size: 20px;">👩</span><br>女
+                        </div>
+                    </div>
+                    <input type="hidden" id="genderInput" value="male">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">年龄</label>
+                    <input type="number" class="form-input" id="ageInput" placeholder="请输入年龄" min="0" max="150">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">生平简介</label>
+                    <textarea class="form-input" id="bioInput" rows="3" placeholder="请输入生平简介（选填）"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary" id="submitBtn">保存</button>
+                <button type="button" class="btn-secondary" onclick="closeModal()">取消</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Data Structure
+        let familyData = {
+            id: 'root',
+            name: '始祖',
+            gender: 'male',
+            age: 88,
+            avatar: '',
+            bio: '家族始祖',
+            children: [
+                {
+                    id: 'child1',
+                    name: '长子',
+                    gender: 'male',
+                    age: 65,
+                    avatar: '',
+                    bio: '长子',
+                    children: [
+                        {
+                            id: 'grandchild1',
+                            name: '长孙',
+                            gender: 'male',
+                            age: 40,
+                            avatar: '',
+                            bio: '长孙',
+                            children: []
+                        },
+                        {
+                            id: 'grandchild2',
+                            name: '孙女',
+                            gender: 'female',
+                            age: 35,
+                            avatar: '',
+                            bio: '孙女',
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    id: 'child2',
+                    name: '次女',
+                    gender: 'female',
+                    age: 62,
+                    avatar: '',
+                    bio: '次女',
+                    children: [
+                        {
+                            id: 'grandchild3',
+                            name: '外孙',
+                            gender: 'male',
+                            age: 30,
+                            avatar: '',
+                            bio: '外孙',
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        };
+
+        let currentScale = 1;
+        let editingNodeId = null;
+        let addingParentId = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTree();
+            updateStats();
+            
+            // Form submission
+            document.getElementById('memberForm').addEventListener('submit', handleSubmit);
+            
+            // Close modal on overlay click
+            document.getElementById('modal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+        });
+
+        // Render Tree
+        function renderTree() {
+            const root = document.getElementById('treeRoot');
+            root.innerHTML = '';
+            root.appendChild(createNodeElement(familyData));
+        }
+
+        function createNodeElement(node) {
+            const li = document.createElement('li');
+            
+            // Create node card
+            const card = document.createElement('div');
+            card.className = `node-card ${node.gender}`;
+            card.onclick = (e) => {
+                if (!e.target.closest('.btn-icon')) {
+                    openEditModal(node.id);
+                }
+            };
+            
+            // Avatar
+            const avatar = document.createElement('img');
+            avatar.className = 'node-avatar';
+            avatar.src = node.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${node.id}&gender=${node.gender}`;
+            avatar.alt = node.name;
+            avatar.onerror = function() {
+                this.src = `https://api.dicebear.com/7.x/initials/svg?seed=${node.name}`;
+            };
+            
+            // Name
+            const name = document.createElement('div');
+            name.className = 'node-name';
+            name.textContent = node.name;
+            
+            // Info
+            const info = document.createElement('div');
+            info.className = 'node-info';
+            const genderText = node.gender === 'male' ? '男' : '女';
+            info.innerHTML = `${genderText} ${node.age ? node.age + '岁' : ''}<br>${node.bio || ''}`;
+            
+            // Actions
+            const actions = document.createElement('div');
+            actions.className = 'node-actions';
+            actions.innerHTML = `
+                <button class="btn-icon btn-edit" onclick="openEditModal('${node.id}')" title="编辑">✏️</button>
+                <button class="btn-icon btn-add" onclick="openAddModal('${node.id}')" title="添加子女">➕</button>
+                ${node.id !== 'root' ? `<button class="btn-icon btn-delete" onclick="deleteNode('${node.id}')" title="删除">🗑️</button>` : ''}
+            `;
+            
+            card.appendChild(avatar);
+            card.appendChild(name);
+            card.appendChild(info);
+            card.appendChild(actions);
+            li.appendChild(card);
+            
+            // Children
+            if (node.children && node.children.length > 0) {
+                const ul = document.createElement('ul');
+                node.children.forEach(child => {
+                    ul.appendChild(createNodeElement(child));
+                });
+                li.appendChild(ul);
+            }
+            
+            return li;
+        }
+
+        // Find node by ID
+        function findNode(id, node = familyData) {
+            if (node.id === id) return node;
+            if (node.children) {
+                for (let child of node.children) {
+                    const found = findNode(id, child);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+
+        // Find parent node
+        function findParent(id, node = familyData) {
+            if (node.children) {
+                for (let child of node.children) {
+                    if (child.id === id) return node;
+                    const found = findParent(id, child);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+
+        // Generate unique ID
+        function generateId() {
+            return 'node_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // Modal Functions
+        function openEditModal(nodeId) {
+            const node = findNode(nodeId);
+            if (!node) return;
+            
+            editingNodeId = nodeId;
+            addingParentId = null;
+            
+            document.getElementById('modalTitle').textContent = '编辑成员';
+            document.getElementById('memberId').value = node.id;
+            document.getElementById('nameInput').value = node.name;
+            document.getElementById('ageInput').value = node.age || '';
+            document.getElementById('bioInput').value = node.bio || '';
+            
+            selectGender(node.gender || 'male');
+            
+            // Avatar
+            const preview = document.getElementById('avatarPreview');
+            const placeholder = document.getElementById('avatarPlaceholder');
+            if (node.avatar) {
+                preview.src = node.avatar;
+                preview.style.display = 'block';
+                placeholder.style.display = 'none';
+            } else {
+                preview.style.display = 'none';
+                placeholder.style.display = 'flex';
+            }
+            
+            document.getElementById('submitBtn').textContent = '保存修改';
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function openAddModal(parentId) {
+            addingParentId = parentId;
+            editingNodeId = null;
+            
+            document.getElementById('modalTitle').textContent = '添加新成员';
+            document.getElementById('memberForm').reset();
+            document.getElementById('memberId').value = '';
+            document.getElementById('parentId').value = parentId;
+            
+            selectGender('male');
+            
+            document.getElementById('avatarPreview').style.display = 'none';
+            document.getElementById('avatarPlaceholder').style.display = 'flex';
+            
+            document.getElementById('submitBtn').textContent = '添加成员';
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            editingNodeId = null;
+            addingParentId = null;
+        }
+
+        function selectGender(gender) {
+            document.getElementById('genderInput').value = gender;
+            document.querySelectorAll('.gender-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            if (gender === 'male') {
+                document.querySelector('.male-option').classList.add('selected');
+            } else {
+                document.querySelector('.female-option').classList.add('selected');
+            }
+        }
+
+        // Avatar Handling
+        function handleAvatarChange(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('avatarPreview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    document.getElementById('avatarPlaceholder').style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Form Submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('nameInput').value.trim();
+            const gender = document.getElementById('genderInput').value;
+            const age = document.getElementById('ageInput').value;
+            const bio = document.getElementById('bioInput').value.trim();
+            const avatarSrc = document.getElementById('avatarPreview').style.display !== 'none' 
+                ? document.getElementById('avatarPreview').src 
+                : '';
+            
+            if (!name) {
+                alert('请输入姓名');
+                return;
+            }
+            
+            if (editingNodeId) {
+                // Edit existing
+                const node = findNode(editingNodeId);
+                if (node) {
+                    node.name = name;
+                    node.gender = gender;
+                    node.age = age ? parseInt(age) : null;
+                    node.bio = bio;
+                    if (avatarSrc && !avatarSrc.startsWith('data:image/svg')) {
+                        node.avatar = avatarSrc;
+                    }
+                }
+            } else if (addingParentId) {
+                // Add new
+                const parent = findNode(addingParentId);
+                if (parent) {
+                    if (!parent.children) parent.children = [];
+                    parent.children.push({
+                        id: generateId(),
+                        name: name,
+                        gender: gender,
+                        age: age ? parseInt(age) : null,
+                        bio: bio,
+                        avatar: avatarSrc && !avatarSrc.startsWith('data:image/svg') ? avatarSrc : '',
+                        children: []
+                    });
+                }
+            }
+            
+            renderTree();
+            updateStats();
+            closeModal();
+        }
+
+        // Delete Node
+        function deleteNode(nodeId) {
+            if (nodeId === 'root') {
+                alert('不能删除根节点');
+                return;
+            }
+            
+            if (!confirm('确定要删除该成员及其所有后代吗？此操作不可恢复。')) {
+                return;
+            }
+            
+            const parent = findParent(nodeId);
+            if (parent && parent.children) {
+                parent.children = parent.children.filter(child => child.id !== nodeId);
+                renderTree();
+                updateStats();
+            }
+        }
+
+        // Update Statistics
+        function updateStats() {
+            let total = 0, male = 0, female = 0, generations = 0;
+            
+            function traverse(node, depth) {
+                total++;
+                if (node.gender === 'male') male++;
+                else female++;
+                generations = Math.max(generations, depth);
+                
+                if (node.children) {
+                    node.children.forEach(child => traverse(child, depth + 1));
+                }
+            }
+            
+            traverse(familyData, 1);
+            
+            document.getElementById('totalCount').textContent = total;
+            document.getElementById('maleCount').textContent = male;
+            document.getElementById('femaleCount').textContent = female;
+            document.getElementById('generationCount').textContent = generations;
+        }
+
+        // Zoom Controls
+        function zoomIn() {
+            currentScale = Math.min(currentScale + 0.1, 2);
+            applyZoom();
+        }
+
+        function zoomOut() {
+            currentScale = Math.max(currentScale - 0.1, 0.5);
+            applyZoom();
+        }
+
+        function resetZoom() {
+            currentScale = 1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            document.getElementById('treeContainer').style.transform = `scale(${currentScale})`;
+            document.getElementById('treeContainer').style.transformOrigin = 'top center';
+        }
+
+        // Export Data
+        function exportData() {
+            const dataStr = JSON.stringify(familyData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'family_tree.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
